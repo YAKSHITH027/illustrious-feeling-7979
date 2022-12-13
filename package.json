@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "json-server": "^0.17.1"
+  },
+  "name": "illustrious-feeling-7979",
+  "description": "",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "json-server --watch ./database/db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YAKSHITH027/illustrious-feeling-7979.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YAKSHITH027/illustrious-feeling-7979/issues"
+  },
+  "homepage": "https://github.com/YAKSHITH027/illustrious-feeling-7979#readme"
+}
