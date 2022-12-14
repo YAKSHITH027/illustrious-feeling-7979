@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nav-center{
+    background-color: #2370f4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 0.5rem;
+    position: sticky;
+    top: 0;
+}
+.nav-center>div>img{
+    width: 8rem;
+}
+.nav-center>div{
+    padding-left: 2rem;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    margin-right: 9rem;
+    text-transform: capitalize;
+    color: white;
+}
+li{
+    list-style: none;
+}
+
+.container{
+    display: flex;
+    min-height: 85vh;
+    width: 90%;
+    margin: auto;
+    margin-top: 2rem;
+    column-gap: 1rem;
+    height: 200vh;
+    text-transform: capitalize;
+}
+.functionality-options{
+    width: 25%;
+    height: 100vh;
+    border-radius: 1rem;
+    /* background-color: rebeccapurple; */
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.add-product>h3{
+  text-align: center;
+  margin: 1rem 0;
+}
+.add-product{
+    display: flex;
+    flex-direction: column;
+}
+.add-product>button{
+    text-transform: capitalize;
+    padding: 0.5rem 1rem;
+    background-color: #176417;
+    border-radius: 0.5rem;
+    color: white;
+    border: none;
+        
+}
+.search-Product,.sort-by-category{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+
+}
+.search-Product>label,
+.sort-by-category>label{
+    font-size: 1.2rem;
+}
+#title-sort,#sort-category{
+    padding: 0.2rem 0.6rem;
+    margin-top: 0.4rem;
+    font-size: 1.1rem;
+    border-radius: 0.2rem;
+    border: 1px solid rgba(0, 0, 0, 0.388);
+}
+#sort-category>option{
+    display: inline-block;
+    padding: 0.4rem 0;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    border-radius: 0.2rem;
+    /* background-color: rebeccapurple; */
+}
+.display-data{
+    width: 75%;
+    /* background-color: darkgoldenrod; */
+    height: 100vh;
+    text-transform: capitalize;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.display-data>h2{
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.show-products{
+    /* background-color: rgb(177, 159, 193); */
+    min-height: 80vh;
+    width: 95%;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.product-title{
+    display: flex;
+    justify-content: space-around;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 0.5rem;
+    padding: 0.5rem 2rem
+}
+.product-title>p{
+    padding: 0.5rem 1.7rem;
+    /* background-color:#F7F7F7; */
+    border: 1px solid;
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+    border-radius: 0.5rem;
+    margin-right: 0.2rem;
+    font-weight: bold;
+   
+
+}
+.products-data{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 2rem;
+    padding: 1rem 0.8rem;
+    border-radius: 1rem;
+}
+.single-product-data{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 0.8rem 0;
+
+}
+.single-product-data>div>img{
+    width: 100%;
+    
+}
+
+.single-img{
+    /* border: 2px solid rebeccapurple; */
+    width: 2rem;
+}
+.edit{
+    text-transform: capitalize;
+    padding: 0.5rem 1rem;
+    background-color: #673ab7;
+    color: white;
+    border-radius: 0.5rem;
+    border: none;
+}
+.delete{
+    text-transform: capitalize;
+    padding: 0.5rem 1rem;
+    background-color: #ac2626;
+    border-radius: 0.5rem;
+    color: white;
+    border: none;
+}
+.single-product-data>p{
+    /* max-width: 5rem; */
+    border: 2px solid rebeccapurple;
+}
+.add-product-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(37, 40, 40, 0.553);
+    display: none;
+
+}
+
+/* form */
+#form{
+    width: 27%;
+    min-width: 300px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-transform: capitalize;
+}
+.form-img,.form-title,.form-quntity{
+  display: flex;
+  flex-direction: column;
+}
+.form-price-cat{
+    display: flex;
+    column-gap: 1rem;
+    
+}
+.form-price-cat input{
+    display: inline-block;
+    width: 100%;
+}
+.form-input{
+    padding: 0.2rem 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.form-add{
+    display: inline-block;
+    width: 100%;
+    background-color: #176417;
+    padding: 0.5rem 1rem;
+    border: none;
+    margin-top: 1rem;
+    border-radius: 0.4rem;
+    color: white;
+}
+ 
