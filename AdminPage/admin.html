@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin page</title>
+    <link rel="stylesheet" href="./admin.css" />
+  </head>
+  <body>
+    <header class="nav-center">
+      <div>
+        <img
+          src="https://i.ibb.co/bNXNYLL/Shopify-removebg-preview-use.png"
+          alt="logo"
+        />
+      </div>
+      <ul class="nav-links">
+        <li>products</li>
+        <li>users</li>
+      </ul>
+    </header>
+    <div class="container">
+      <div class="functionality-options">
+        <div class="add-product">
+          <h3>add new product</h3>
+          <button>add product</button>
+        </div>
+        <div class="search-Product">
+          <label for="title">search product by title</label>
+          <input
+            type="text"
+            id="title-sort"
+            placeholder="Search Product"
+            name="title"
+          />
+        </div>
+        <div class="sort-by-category">
+          <label for="sort">sort by category</label>
+          <select name="sort" id="sort-category">
+            <option value="all">All</option>
+            <option value="laptop">laptop</option>
+            <option value="mobile">mobele</option>
+          </select>
+        </div>
+      </div>
+      <div class="add-product-modal">
+        <form id="form">
+          <div class="form-img">
+            <label for="img">image url</label>
+            <input type="text" class="form-input" placeholder="Enter Img URL" />
+          </div>
+          <div class="form-title">
+            <label for="title">product title</label>
+            <input
+              type="text"
+              class="form-input"
+              placeholder="Enter Product Title"
+            />
+          </div>
+          <div class="form-price-cat">
+            <div class="form=category">
+              <label for="category">category</label>
+              <input type="text" class="form-input" placeholder="Category" />
+            </div>
+            <div class="form-price">
+              <label for="price">price</label>
+              <input type="text" class="form-input" placeholder="Price" />
+            </div>
+          </div>
+          <div class="form-quntity">
+            <label for="quntity">quntity</label>
+            <input
+              type="text"
+              class="form-input"
+              placeholder="Enter Product quntity"
+            />
+          </div>
+          <input type="submit" class="form-add" value="Add Product" />
+        </form>
+      </div>
+      <div class="display-data">
+        <h2>all products</h2>
+        <div class="show-products">
+          <div class="product-title">
+            <p>Image</p>
+            <p>title</p>
+            <p>category</p>
+            <p>price</p>
+            <p>quntity</p>
+            <p>edit</p>
+            <p>delete</p>
+          </div>
+          <div class="products-data">
+            <!-- start of single prouct -->
+            <div class="single-product-data">
+              <div class="single-img">
+                <img
+                  src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+                  alt=""
+                />
+              </div>
+              <p>bata</p>
+              <p>shirts</p>
+              <p>2000</p>
+              <p>30</p>
+              <div>
+                <button class="edit">edit</button>
+              </div>
+              <div>
+                <button class="delete">delete</button>
+              </div>
+            </div>
+            <!-- end of single product -->
+            <!-- start of single prouct -->
+            <div class="single-product-data">
+              <div class="single-img">
+                <img
+                  src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+                  alt=""
+                />
+              </div>
+              <p>batdsa</p>
+              <p>shirts</p>
+              <p>2000</p>
+              <p>30</p>
+              <div>
+                <button class="edit">edit</button>
+              </div>
+              <div>
+                <button class="delete">delete</button>
+              </div>
+            </div>
+            <!-- end of single product -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./admin.js"></script>
+</html>
