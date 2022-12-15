@@ -12,17 +12,19 @@ const mainGET = async (URL) => {
     }
     return acc;
   }, []);
-  console.log(unique);
+  let total = data.length;
+  //   console.log(unique);
+  show(total, unique);
   sortCategory(unique);
 };
 mainGET(baseURL);
 // GET request form the product
 
-const getRequest = async (URL, page_num = 1) => {
+const getRequest = async (URL, page_num = 1, cat = "") => {
   try {
-    let res = await fetch(`${URL}?_limit=6&_page=${page_num}`);
+    let res = await fetch(`${URL}?${cat}_limit=6&_page=${page_num}`);
     let data = await res.json();
-
+    // console.log(res, data);
     let total = res.headers.get("x-total-count");
     let totalPage = Math.ceil(total / 6);
 
@@ -44,7 +46,7 @@ const postRequest = async (data) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
-    console.log(res);
+    // console.log(res);
     getRequest(baseURL);
   } catch (error) {
     console.log(error);
@@ -60,7 +62,7 @@ const patchRequest = async (id, data) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
-    console.log(res);
+    // console.log(res);
     getRequest(baseURL);
   } catch (error) {
     console.log(error);
@@ -74,7 +76,7 @@ const deleteRequest = async (id) => {
     let res = await fetch(`${baseURL}/${id}`, {
       method: "DELETE",
     });
-    console.log(res);
+    // console.log(res);
     getRequest(baseURL);
   } catch (error) {
     console.log(error);
@@ -92,6 +94,7 @@ const renderProduct = (data) => {
     let price = item.price;
     let quntity = item.rating.count;
     let title = item.title;
+    // console.log(title);
     return `
                 <div class="single-product-data" data-id="${id}">
                     <div class="single-img">
@@ -152,7 +155,7 @@ const renderProduct = (data) => {
           quntity: Number(quntity.value),
         };
         const editId = e.target.dataset.id;
-        // patchRequest(editId, changedData);
+        patchRequest(editId, changedData);
         // console.log(changedData);
       }
     });
@@ -164,7 +167,7 @@ const renderProduct = (data) => {
   deleteProduct.forEach((singleDelete) => {
     singleDelete.addEventListener("click", (e) => {
       const deleteId = +e.target.dataset.id;
-      //   deleteRequest(deleteId);
+      deleteRequest(deleteId);
     });
   });
 };
@@ -177,11 +180,13 @@ const getData = (e) => {
   e.preventDefault();
 
   const title = document.querySelector(".form-title-in").value;
-  const price = document.querySelector(".form-price-in").value;
+  const price = +document.querySelector(".form-price-in").value;
   const description = document.querySelector(".form-desc-in").value;
-  const category = document.querySelector(".form-category-in").value;
+  const category = document
+    .querySelector(".form-category-in")
+    .value.toLowerCase();
   const image = document.querySelector(".form-img-in").value;
-  const quntity = document.querySelector(".form-qun-in").value;
+  const quntity = +document.querySelector(".form-qun-in").value;
   const rating = { rate: 4.6, count: quntity };
   const productObj = {
     title,
@@ -191,8 +196,8 @@ const getData = (e) => {
     image,
     rating,
   };
-  //   postRequest(productObj);
-  console.log(productObj);
+  postRequest(productObj);
+  //   console.log(productObj);
 };
 
 productForm.addEventListener("submit", getData);
@@ -210,7 +215,10 @@ const renderPagination = (totalPage) => {
   allpag.forEach((singleBtn) => {
     singleBtn.addEventListener("click", (e) => {
       let pageNum = e.target.dataset.id;
-      getRequest(baseURL, pageNum);
+      let value = sortCat.value;
+      value == "all"
+        ? getRequest(baseURL, pageNum)
+        : getRequest(getRequest(baseURL, pageNum, `category=${value}&`));
     });
   });
 };
@@ -241,5 +249,74 @@ const sortCategory = (data) => {
             <option value="${item}">${item}</option>
          `;
   });
+  options.unshift(`<option value="all">All</option>`);
   appendOption.innerHTML = options.join("");
+};
+
+// sort category
+
+let sortCat = document.querySelector("#sort-category");
+sortCat.addEventListener("change", (e) => {
+  //   console.log(sortCat.value);
+  let cat = sortCat.value;
+  let changeCat = document.querySelector(".change-cat");
+  changeCat.innerText = cat;
+  cat == "all"
+    ? getRequest(baseURL)
+    : getRequest(baseURL, 1, `category=${cat}&`);
+});
+
+// search by product
+
+let searchTitle = document.querySelector("#title-sort");
+searchTitle.addEventListener("keypress", (e) => {
+  let searchTerm = searchTitle.value;
+  if (e.key == "Enter") {
+    let newURL = "";
+    for (let i = 0; i < searchTerm.length; i++) {
+      if (searchTerm[i] == " ") {
+        newURL += "%20";
+        continue;
+      }
+      newURL += searchTerm[i];
+    }
+    // console.log(newURL);
+    getRequest(baseURL, 1, `title=${newURL}&`);
+  }
+});
+
+// toggle modal
+
+let addBtn = document.querySelector(".add-product-btn");
+addBtn.addEventListener("click", (e) => {
+  formModal.classList.add("show");
+});
+
+let formModal = document.querySelector(".add-product-modal");
+formModal.addEventListener("click", (e) => {
+  if (e.target.closest("#form")) return;
+  formModal.classList.remove("show");
+});
+
+productForm.addEventListener("submit", () => {
+  formModal.classList.remove("show");
+});
+
+// admin name
+
+let admin = document.querySelector("#admin-name");
+admin.innerText = localStorage.getItem("adminName") || "Yakshith ";
+
+const show = (total, category) => {
+  document.querySelector(".num").innerText = total;
+  document.querySelector(".cat-num").innerText = category.length;
+  category.length = 4;
+
+  document.querySelector(".top").innerHTML = category
+    .map((item) => {
+      return `
+           <p>${item}</p>
+       `;
+    })
+    .join("");
 };
