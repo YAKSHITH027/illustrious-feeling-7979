@@ -16,14 +16,29 @@
         />
       </div>
       <ul class="nav-links">
-        <p>welcome! Yakshith</p>
+        <p>welcome! <span id="admin-name"></span></p>
       </ul>
     </header>
+    <div class="info-product">
+      <div class="total-product">
+        <div class="num">11</div>
+        <p>total product</p>
+      </div>
+      <div class="total-category">
+        <div class="cat-num">4</div>
+        <p>total category</p>
+      </div>
+      <div class="top-category">
+        <p>top 4 category</p>
+        <hr />
+        <div class="top">></div>
+      </div>
+    </div>
     <div class="container">
       <div class="functionality-options">
         <div class="add-product">
           <h3>add new product</h3>
-          <button>add product</button>
+          <button class="add-product-btn">add product</button>
         </div>
         <div class="search-Product">
           <label for="title">search product by title</label>
@@ -36,15 +51,11 @@
         </div>
         <div class="sort-by-category">
           <label for="sort">sort by category</label>
-          <select name="sort" id="sort-category">
-            <option value="all">All</option>
-            <option value="laptop">laptop</option>
-            <option value="mobile">mobele</option>
-          </select>
+          <select name="sort" id="sort-category"></select>
         </div>
       </div>
       <div class="add-product-modal">
-        <form id="form">
+        <form id="form" class="formc">
           <div class="form-img">
             <label for="img">image url</label>
             <input
@@ -99,7 +110,7 @@
         </form>
       </div>
       <div class="display-data">
-        <h2>all products</h2>
+        <h2><span class="change-cat">All</span> products</h2>
         <div class="show-products">
           <div class="product-title">
             <p>Image</p>
@@ -110,55 +121,8 @@
             <p>edit</p>
             <p>delete</p>
           </div>
-          <div class="products-data">
-            <!-- start of single prouct -->
-            <div class="single-product-data">
-              <div class="single-img">
-                <img
-                  src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-                  alt="product img"
-                />
-              </div>
-              <input type="text" value="bata df" readonly />
-              <input type="text" value="shirts" readonly />
-              <input type="text" value="2000" readonly />
-              <input type="text" value="30" readonly />
-              <div>
-                <button class="edit">edit</button>
-              </div>
-              <div>
-                <button class="delete">delete</button>
-              </div>
-            </div>
-            <!-- end of single product -->
-            <!-- start of single prouct -->
-            <div class="single-product-data">
-              <div class="single-img">
-                <img
-                  src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-                  alt=""
-                />
-              </div>
-              <p>batdsa</p>
-              <p>shirts</p>
-              <p>2000</p>
-              <p>30</p>
-              <div>
-                <button class="edit">edit</button>
-              </div>
-              <div>
-                <button class="delete">delete</button>
-              </div>
-            </div>
-            <!-- end of single product -->
-          </div>
-          <div class="pagination-container">
-            <button class="pag-btn high" data-id="">1</button>
-            <button class="pag-btn">1</button>
-            <button class="pag-btn">1</button>
-            <button class="pag-btn">1</button>
-            <button class="pag-btn">1</button>
-          </div>
+          <div class="products-data"></div>
+          <div class="pagination-container"></div>
         </div>
       </div>
     </div>
