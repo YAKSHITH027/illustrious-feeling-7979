@@ -1,127 +1,124 @@
+/* **************NaveBar**************** */
+#navebar {
+    border: .1px solid lightgrey;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    /* border: 1px solid palevioletred; */
+    width: 1180px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+
+}
+
+#navebar>:nth-child(3) {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: small;
+    font-weight: bold;
+    color: gray;
+
+}
+
+#middlenave {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: small;
+    font-weight: bold;
+    color: gray;
+
+}
+
+#middlenave>:nth-child(3) {
+    color: rgb(24, 179, 127);
+}
 
 
+/* *****************************Container******************************* */
 
 
+#container {
+    /* border: 2px solid red; */
+    width: 1100px;
+    height: 800px;
+    margin: auto;
+    display: flex;
+    gap: 30px;
 
-     /* **************NaveBar**************** */
-     #navebar{
-        border: .1px solid lightgrey;
-        border-top:0px;
-        border-right: 0px;
-        border-left: 0px;
-        /* border: 1px solid palevioletred; */
-        width:1180px;
-        height: 30px;
-        display: flex;
-        justify-content: space-between;
-        padding: 30px;
- 
-    }
-    #navebar>:nth-child(3){
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size: small;
-        font-weight: bold;
-        color: gray;
+}
 
-    }
-     
-    #middlenave{
-        display: flex;
-        justify-content: space-evenly;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size: small;
-        font-weight: bold;
-        color: gray;
+.div1 {
+    /* border: 1px solid blue; */
+    width: 700px;
+    height: 715px;
+    /* margin-top: 30px; */
 
-    }
+}
 
-    #middlenave>:nth-child(3){
-        color: rgb(24, 179, 127);
-    }
+#div2 {
+    /* border: 1px solid #008000; */
+    border: .5px solid lightgrey;
+    width: 600px;
+    height: 680px;
+    margin-top: 30px;
+    /* border-radius: 5px; */
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
 
+}
 
-    /* *****************************Container******************************* */
-
-
-    #container{
-        /* border: 2px solid red; */
-        width: 1100px;
-        height: 800px;
-        margin: auto;
-        display: flex;
-        gap:30px;
-        
-    }
-
-    .div1{
-        /* border: 1px solid blue; */
-        width: 700px;
-        height: 715px;
-        /* margin-top: 30px; */
-
-    }
-
-    .div2{
-        /* border: 1px solid #008000; */
-        border: .5px solid lightgrey;
-        width: 600px;
-        height: 680px;
-        margin-top: 30px;
-        /* border-radius: 5px; */
-        border-top:0px;
-        border-right: 0px;
-        border-bottom: 0px;
-
-    }
-    .bankoffer{
-        /* border: .5px solid lightgrey; */
-        border-radius: 10px;
-        width: 650px;
-        height: 130px;
-        margin-top: 30px;
-        /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.bankoffer {
+    /* border: .5px solid lightgrey; */
+    border-radius: 10px;
+    width: 650px;
+    height: 130px;
+    margin-top: 30px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
          */
-         /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
-         box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: small;
-        padding-left: 30px;
-        padding-top: 10px;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: small;
+    padding-left: 30px;
+    padding-top: 10px;
 
-    }
+}
 
-    .showmore{
-        color:red;
-    }
+.showmore {
+    color: red;
+}
 
-    .arrow {
-  border: solid red;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-   transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
+.arrow {
+    border: solid red;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
 }
 
 
 /* ***********************************Body****************************** */
 
 
-.pay-method-main{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.pay-method-main {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.pay-option-submain{
+.pay-option-submain {
     /* border: 1px solid #008000; */
     width: 700px;
     height: 370px;
     display: flex;
-    gap:20px;
+    gap: 20px;
     /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
 
 }
 
-.pay-start{
+.pay-start {
     border: .5px solid lightgrey;
     width: 280px;
     height: 60px;
@@ -132,58 +129,197 @@
     font-size: small;
 
 }
-.body>div{
+
+#creditcard{
+    background-color:rgb(233, 247, 245);
+    border-right: 0px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    color: rgb(238, 46, 46);
+
+}
+#Debitcard{
+    background-color:rgb(233, 247, 245);
+    border-right: 0px;
+}
+.body>div {
     /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     width: 280px;
     height: 60px;
-    background-color:rgb(240, 39, 39);
+    background-color: rgb(241, 68, 68);
 }
 
-.body>div>button{
+.body>div>button {
     /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     width: 280px;
     height: 60px;
-    background-color:rgb(241, 241, 241);
+    background-color: rgb(241, 241, 241);
     padding-right: 100px;
-    font-size:15px;
+    font-size: 15px;
     border: 0px;
-    text-align:left;
+    text-align: left;
     font-weight: bold;
     padding-left: 20px;
+
+
 }
 
-#button-upi{
+
+#button-upi {
     text-align: center;
 }
-.render{
-    border: .5px solid lightgrey;
-    /* border: 2px solid red; */
-    width: 370px;
+
+button:hover {
+    color: red;
+    background-color: teal;
+    cursor: pointer;
 }
 
-#gift{
+
+#gift {
     border: .5px solid lightgrey;
     display: flex;
     justify-content: space-between;
-    padding:10px;
+    padding: 10px;
     margin-top: 20px;
     border-radius: 5px;
 }
-#gift>.applygiftcard{
+
+#gift>.applygiftcard {
     padding-top: 20px;
     /* padding-left: 50px; */
     color: red;
 }
 
+/* ********************************Render*********************************** */
+
+.render {
+    border: .5px solid lightgrey;
+    /* border: 2px solid red; */
+    width: 370px;
+    padding: 10px;
+    background-color:rgb(233, 247, 245);
+    border-radius: 5px;
+}
+
+.render>p {
+    font-size: small;
+}
+
+#knowmore {
+    color: red;
+    font-weight: bold;
+
+}
+
+#cardnumber {
+    border: .5px solid lightgrey;
+    width: 330px;
+    height: 35px;
+    margin: 5px;
+    position: absolute;
+    border-radius: 3px;
+    /* left:30px ; */
+    /* right: 20px; */
+}
+#cdimage{
+    /* position: absolute; */
+    border: .5px solid lightgrey;
+    left: 300px;
+    position: relative;
+    margin-top: 14px;
+}
+
+#nameofcard {
+    border: .5px solid lightgrey;
+    width: 330px;
+    height: 35px;
+    margin: 5px;
+    margin-top: 15px;
+    border-radius: 3px;
+
+}
+
+#dateofbirth {
+    border: .5px solid lightgrey;
+    width: 197px;
+    height: 35px;
+    margin: 5px;
+    border-radius: 3px;
+
+}
+
+#cvv {
+    width: 110px;
+    height: 35px;
+    margin: 5px;
+    border: .5px solid lightgrey;
+    border-radius: 3px;
+}
+
+#buttonpaynow {
+    width: 335px;
+    height: 60px;
+    margin: 7px;
+    margin-top: 25px;
+    background-color: rgb(239, 88, 88);
+    color: white;
+    border: 0px;
+    font-weight: bold;
+    border-radius: 3px;
+
+    
+
+}
+
+/* ***********************************Total Amount********************************** */
+
+#div2>:nth-child(1){
+    font-size: medium;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 30px;
+
+}
+
+#totalpayment{
+    width: 300px;
+    height: 100px;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 25px;
+    gap:30px;
+    border: 1px solid purple;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: small;
+    padding: 10px;
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+    border-radius: 3px;
+    border: .5px solid lightgrey;
+    border-top: 0px;
+    border-right: 0px;
+    border-left:0px ;
+}
+
+#totalprice{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 300px;
+    height: 50px;
+    margin: 30px;
+    gap:35px;
+    padding: 10px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
 /* ************************fotter************************ */
 
 
-#fotter{
+#fotter {
     border: .5px solid lightgrey;
-    border-left:0px;
+    border-left: 0px;
     border-right: 0px;
     width: 1200px;
     height: 60px;
@@ -192,10 +328,11 @@
     margin-top: 20px;
     padding-top: 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-   
+
 
 }
- #contacthelp{
+
+#contacthelp {
     text-align: center;
     padding-right: 130px;
- }
+}
