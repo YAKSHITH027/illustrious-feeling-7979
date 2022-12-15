@@ -16,8 +16,7 @@
         />
       </div>
       <ul class="nav-links">
-        <li>products</li>
-        <li>users</li>
+        <p>welcome! Yakshith</p>
       </ul>
     </header>
     <div class="container">
@@ -48,32 +47,52 @@
         <form id="form">
           <div class="form-img">
             <label for="img">image url</label>
-            <input type="text" class="form-input" placeholder="Enter Img URL" />
+            <input
+              type="text"
+              class="form-input form-img-in"
+              placeholder="Enter Img URL"
+            />
           </div>
           <div class="form-title">
             <label for="title">product title</label>
             <input
               type="text"
-              class="form-input"
+              class="form-input form-title-in"
               placeholder="Enter Product Title"
             />
           </div>
           <div class="form-price-cat">
-            <div class="form=category">
+            <div class="form-category">
               <label for="category">category</label>
-              <input type="text" class="form-input" placeholder="Category" />
+              <input
+                type="text"
+                class="form-input form-category-in"
+                placeholder="Category"
+              />
             </div>
             <div class="form-price">
               <label for="price">price</label>
-              <input type="text" class="form-input" placeholder="Price" />
+              <input
+                type="text"
+                class="form-input form-price-in"
+                placeholder="Price"
+              />
             </div>
           </div>
           <div class="form-quntity">
             <label for="quntity">quntity</label>
             <input
               type="text"
-              class="form-input"
+              class="form-input form-qun-in"
               placeholder="Enter Product quntity"
+            />
+          </div>
+          <div class="form-desc">
+            <label for="description">description</label>
+            <input
+              type="text"
+              class="form-input form-desc-in"
+              placeholder="Enter Product description"
             />
           </div>
           <input type="submit" class="form-add" value="Add Product" />
@@ -97,13 +116,13 @@
               <div class="single-img">
                 <img
                   src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-                  alt=""
+                  alt="product img"
                 />
               </div>
-              <p>bata</p>
-              <p>shirts</p>
-              <p>2000</p>
-              <p>30</p>
+              <input type="text" value="bata df" readonly />
+              <input type="text" value="shirts" readonly />
+              <input type="text" value="2000" readonly />
+              <input type="text" value="30" readonly />
               <div>
                 <button class="edit">edit</button>
               </div>
@@ -132,6 +151,13 @@
               </div>
             </div>
             <!-- end of single product -->
+          </div>
+          <div class="pagination-container">
+            <button class="pag-btn high" data-id="">1</button>
+            <button class="pag-btn">1</button>
+            <button class="pag-btn">1</button>
+            <button class="pag-btn">1</button>
+            <button class="pag-btn">1</button>
           </div>
         </div>
       </div>
