@@ -37,6 +37,7 @@ button{
     margin-top: 30px;
     padding-top: 1rem;
     padding-bottom: 1rem;
+      color: black;
 
 }
 
@@ -44,6 +45,7 @@ button{
     width: 250px;
     margin: auto;
     border: 1px solid white;
+      color: black;
 
 }
 img{
@@ -55,6 +57,7 @@ p{
     text-align: center;
     margin-top: 7px;
     margin-bottom: 7px;
+  
 }
 button{
     background-color: bisque;
