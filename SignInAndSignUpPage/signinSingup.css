@@ -123,4 +123,15 @@ body {
     color: var(--color-error);
 }
 
+#togglePassword{
+    margin-left: -30px; 
+    cursor: pointer;
+    display: inline;
+}
+#loginPassword{
+    display: inline;
+}
 
+#signupPassword{
+    display: inline;
+}

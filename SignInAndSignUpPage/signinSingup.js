@@ -1,4 +1,6 @@
 
+let userData = JSON.parse(localStorage.getItem("userData")) || [];
+
 
 let loginForm = document.querySelector("#login");
 let createAccountForm = document.querySelector("#createAccount");
@@ -22,17 +24,115 @@ document.addEventListener("DOMContentLoaded", () => {
 
 loginForm.addEventListener("submit",(e)=>{
     e.preventDefault();
-    console.log("login");
+    // console.log("login");
+    // let userData = localStorage.getItem("userData") || [];
+
     let lemail = document.querySelector("#loginEmail").value;
     
     let lpassword = document.querySelector("#loginPassword").value;
-    console.log(lemail,lpassword);
+    let flag = false;
+    userData.forEach(e => {
+        
+        if(lemail == e.email && lpassword == e.password){
+            flag = true
+            localStorage.setItem("userName",e.firstName);
+        }
+    })
+    if(flag == true){
+        swal("Congratulation SignIn successful!!", "Redirecting you to HomePage", "success");
+        // window.location.href = 
+    }else{
+        swal("Wrong Credential", "Please enter correct email/password", "error");
+        lemail = "";
+        lpassword ="";
+    }
 })
 
 
 
 
-document.querySelector("#createAccount").addEventListener("submit",(event)=>{
+
+
+
+
+
+
+
+
+
+createAccountForm.addEventListener("submit",(event)=>{
     event.preventDefault();
-    console.log(`hiii`);
+    // console.log(`hiii`);
+    // let userData = localStorage.getItem("userData") || [];
+
+    let firstName = document.querySelector("#signupfirstname").value;
+
+    let lastName = document.querySelector("#signuplastname").value;
+
+
+    let userName = document.querySelector("#signupUsername").value;
+
+    let email = document.querySelector("#signupEmail").value;
+
+    let password = document.querySelector("#signupPassword").value;
+
+    let obj = {
+        firstName,
+        lastName,
+        userName,
+        email,
+        password
+    }
+    userData.push(obj);
+    localStorage.setItem("userData",JSON.stringify(userData));
+ 
+    swal("Congratulation SignUp successful!!", "Redirecting you to login Page", "success");
+    setTimeout(() => {
+        loginForm.classList.remove("form--hidden");
+        createAccountForm.classList.add("form--hidden");
+    },5000)
+
+
+    // loginForm.classList.remove("form--hidden");
+    // createAccountForm.classList.add("form--hidden");
+
+    console.log(obj);
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+const togglePassword = document.querySelector('#togglePassword');
+  const lpassword = document.querySelector('#loginPassword');
+  const spassword = document.querySelector('#signupPassword');
+
+  togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const atype = lpassword.getAttribute('type') === 'password' ? 'text' : 'password';
+    lpassword.setAttribute('type', atype);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});
+
+
+togglePassword.addEventListener('click', function (e) {
+    console.log("hi")
+    // toggle the type attribute
+    const type = spassword.getAttribute('type') === 'password' ? 'text' : 'password';
+    spassword.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});
+
+
+
+
