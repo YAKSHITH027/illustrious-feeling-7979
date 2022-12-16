@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=sc, initial-scale=1.0">
     <title>SignIn/SignUp Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="./signinSingup.css">
     
 </head>
@@ -18,12 +19,15 @@
 
             <!-- login email -->
             <div class="form__input-group">
-                <input type="text" id="loginEmail" class="form__input" autocomplete="off"  autofocus placeholder="Username or email">
+                <input type="email" id="loginEmail" class="form__input" autofocus placeholder="Username or email">
+                <div class="form__input-error-message" id="loginemailerror"></div>
             </div>
 
             <!-- login password -->
             <div class="form__input-group">
-                <input type="password" id="loginPassword" class="form__input" autofocus placeholder="Password">
+                <input type="password" id="loginPassword" class="form__input"  autofocus placeholder="Password" ></input>
+                <i class="far fa-eye" id="togglePassword"></i>
+                
             </div>
 
             <input class="form__button" type="submit" value="Continue">
@@ -56,10 +60,11 @@
                 <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username">
             </div>
             <div class="form__input-group">
-                <input type="email" class="form__input" autofocus placeholder="Email Address">
+                <input type="email" id="signupEmail" class="form__input" autofocus placeholder="Email Address">
             </div>
             <div class="form__input-group">
-                <input type="password" class="form__input" autofocus placeholder="Password">
+                <input type="password" id="signupPassword"  class="form__input" autofocus placeholder="Password">
+                <i class="far fa-eye" id="togglePassword"></i>
             </div>
             <input class="form__button" type="submit" value="Continue" id="creat_account">
             <p class="form__text">
@@ -70,7 +75,7 @@
 
 
 
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./signinSingup.js"></script>
     
 </body>
