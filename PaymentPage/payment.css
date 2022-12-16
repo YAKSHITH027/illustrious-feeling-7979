@@ -336,3 +336,9 @@ button:hover {
     text-align: center;
     padding-right: 130px;
 }
+
+::placeholder{
+    color:rgb(212, 212, 212);
+     
+    
+}

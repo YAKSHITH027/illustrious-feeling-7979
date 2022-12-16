@@ -18,19 +18,29 @@
      cvv,
    };
 
-   console.log(obj);
-   if (card < 16 || cardname == "" || date < 5 || cvv < 3) {
-     // alert("Payment pending");
-     swal("Opps", "Some Thing went wrong");
-   } else {
-     PayArr.push(obj);
-     localStorage.setItem("credit", JSON.stringify(obj));
+  //  console.log(obj);
+   if (card.length ='' || cardname =='' || date=='' || cvv=='') {
+    
+     swal("Opps!", "Please enter card details");
 
-     swal("THANK YOU", "Your Order Is Successful!", "success");
+   } else  if(card.length < 19){
+     swal( "Enter valid card number");
 
-     // setTimeout(() => {
-     //   window.location.href = "order.html";
-     // }, 3000);
+   }else if(cardname =='' || cardname.length < 3){
+    swal("Enter valid name");
+
+   }else if(date.length =='' || date.length < 5){
+    swal("Enter valid date");
+
+   }else if(cvv.length =='' || cvv.length < 3){
+    swal("Enter valid cvv");
+
+   }else{
+    PayArr.push(obj);
+    localStorage.setItem("credit", JSON.stringify(obj));
+ 
+    swal("THANK YOU", "Your Order Is Successful!", "success");
    }
+
    console.log(obj);
  }
