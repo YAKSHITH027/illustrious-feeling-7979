@@ -13,11 +13,11 @@ const mainGET = async (URL) => {
     return acc;
   }, []);
   let total = data.length;
-  //   console.log(unique);
   show(total, unique);
   sortCategory(unique);
 };
 mainGET(baseURL);
+
 // GET request form the product
 
 const getRequest = async (URL, page_num = 1, cat = "") => {
