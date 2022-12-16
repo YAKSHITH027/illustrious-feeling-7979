@@ -1,11 +1,6 @@
 
 
-
-
-
-
-
-const handleRemove=( el)=>{
+const handleRemove=(el)=>{
 
     let cartArr = JSON.parse(localStorage.getItem('cart'));
 
@@ -77,11 +72,9 @@ const handleQuantity=(el, type)=> {
             }
     })
 
-
     localStorage.setItem('cart',JSON.stringify(cartArr))
     handlePriceCalculation()
     append(cartArr)
-
    
 }
 
@@ -112,15 +105,15 @@ const append = (data) => {
         img.src = el.image;
         titleP.innerText = el.title;
         categoryP.innerText=el.category;
-        priceP.innerText = el.price;
+        priceP.innerText = `Price -`+`₹`+`${el.price}`;
         increatmentButton.innerText = "+"
         decrementButton.innerText = '-';
         removeButton.innerText = "Remove"
         qtyP.innerText = 'Quantity-' +`${el.qty}`
-        qtyP.style.color = 'yellow'
+        qtyP.style.color = 'black'
 
         removeButton.style.backgroundColor = 'red'
-        removeButton.style.color = 'white'
+        removeButton.style.color = 'black'
 
         increatmentButton.style.background = 'teal'
         decrementButton.style.backgroundColor ='teal'
@@ -170,5 +163,5 @@ addressbutton.addEventListener("click",()=>{
         return;
     }
 
-    window.location.href="addressPage.html"
+    window.location.href="payment.html"
 });
