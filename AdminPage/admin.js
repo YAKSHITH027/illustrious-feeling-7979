@@ -46,7 +46,8 @@ const postRequest = async (data) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
-    // console.log(res);
+    console.log(res);
+    mainGET(baseURL);
     getRequest(baseURL);
   } catch (error) {
     console.log(error);
@@ -310,13 +311,13 @@ admin.innerText = localStorage.getItem("adminName") || "Yakshith ";
 const show = (total, category) => {
   document.querySelector(".num").innerText = total;
   document.querySelector(".cat-num").innerText = category.length;
-  category.length = 4;
-
   document.querySelector(".top").innerHTML = category
-    .map((item) => {
-      return `
-           <p>${item}</p>
-       `;
+    .map((item, index) => {
+      if (index < 4) {
+        return `
+                <p>${item}</p>
+            `;
+      }
     })
     .join("");
 };
