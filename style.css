@@ -129,6 +129,9 @@ a{
     margin: 0.3rem 0;
     position: relative;
 }
+.suggestion{
+    width: 97%;
+}
 .navbar-collapse>ul>li>a>span{
     position: absolute;
     right: 10%;
@@ -292,9 +295,10 @@ a{
     display: block;
 }
 .suggestion{
-    width: 20rem;
+    width: 40rem;
     background-color: rgb(72, 59, 59);
         position: absolute;
+
         /* width: 98%; */
         /* padding: 0.5rem 0.5rem; */
         /* border-radius: 5px; */
@@ -318,7 +322,7 @@ a{
 .suggestion{
     background-color: white;
     position: absolute;
-    width: 97%;
+    /* width: 40rem; */
     /* padding: 0.5rem 0.5rem; */
     /* border-radius: 5px; */
     /* border-bottom: 1px solid rgba(0, 0, 0, 0.263); */
@@ -342,6 +346,7 @@ a{
     background-color: #ddd;
 }
 .check{
+    margin-top: 12rem;
     min-height: 200vh;
 }
 .append2{
