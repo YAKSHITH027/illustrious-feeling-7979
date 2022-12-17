@@ -39,7 +39,7 @@
     PayArr.push(obj);
     localStorage.setItem("credit", JSON.stringify(obj));
  
-    swal("THANK YOU", "Your Order Is Successful!", "success");
+    swal("THANK YOU", "Your Order Is Successful!" , "success");
    }
 
    console.log(obj);
