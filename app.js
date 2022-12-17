@@ -91,10 +91,7 @@ document.querySelector("#search2").addEventListener("input", (e) => {
     let alltar = document.querySelectorAll(".suggestio");
     alltar.forEach((single) => {
       single.addEventListener("click", (e) => {
-        localStorage.setItem(
-          "category",
-          JSON.stringify(e.target.innerText.toLowerCase())
-        );
+        localStorage.setItem("category", e.target.innerText.toLowerCase());
       });
     });
   }
