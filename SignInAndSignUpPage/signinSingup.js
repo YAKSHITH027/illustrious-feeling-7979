@@ -30,7 +30,11 @@ loginForm.addEventListener("submit",(e)=>{
     let lemail = document.querySelector("#loginEmail").value;
     
     let lpassword = document.querySelector("#loginPassword").value;
-    let flag = false;
+
+    if(lemail.length == 0 && lpassword.length == 0){
+        swal("Please fill all inputs")
+    }else{
+        let flag = false;
     userData.forEach(e => {
         
         if(lemail == e.email && lpassword == e.password){
@@ -40,12 +44,19 @@ loginForm.addEventListener("submit",(e)=>{
     })
     if(flag == true){
         swal("Congratulation SignIn successful!!", "Redirecting you to HomePage", "success");
+
+
+
         // window.location.href = 
+        lemail = "";
+        lpassword ="";
     }else{
         swal("Wrong Credential", "Please enter correct email/password", "error");
         lemail = "";
         lpassword ="";
     }
+    }
+
 })
 
 
@@ -83,14 +94,31 @@ createAccountForm.addEventListener("submit",(event)=>{
         email,
         password
     }
-    userData.push(obj);
+
+    if(firstName.length == 0 || lastName.length == 0|| userName.length == 0|| email.length == 0|| password.length == 0){
+        swal("Please fill all inputs");
+    }else{
+        userData.push(obj);
     localStorage.setItem("userData",JSON.stringify(userData));
  
     swal("Congratulation SignUp successful!!", "Redirecting you to login Page", "success");
+
+    firstName ="";
+    lastName ="";
+    userName ="";
+    email ="";
+    password ="";
+
     setTimeout(() => {
         loginForm.classList.remove("form--hidden");
         createAccountForm.classList.add("form--hidden");
-    },5000)
+    },2500);
+
+
+    
+    }
+
+    
 
 
     // loginForm.classList.remove("form--hidden");
@@ -115,6 +143,24 @@ const togglePassword = document.querySelector('#togglePassword');
   const lpassword = document.querySelector('#loginPassword');
   const spassword = document.querySelector('#signupPassword');
 
+
+  const togglePassword2 = document.querySelector('#togglePassword2');
+  togglePassword2.addEventListener('click', function (e) {
+    console.log("hi")
+    // toggle the type attribute
+    const type = spassword.getAttribute('type') === 'password' ? 'text' : 'password';
+    spassword.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});
+
+
+
+
+
+
+
+
   togglePassword.addEventListener('click', function (e) {
     // toggle the type attribute
     const atype = lpassword.getAttribute('type') === 'password' ? 'text' : 'password';
@@ -124,14 +170,7 @@ const togglePassword = document.querySelector('#togglePassword');
 });
 
 
-togglePassword.addEventListener('click', function (e) {
-    console.log("hi")
-    // toggle the type attribute
-    const type = spassword.getAttribute('type') === 'password' ? 'text' : 'password';
-    spassword.setAttribute('type', type);
-    // toggle the eye slash icon
-    this.classList.toggle('fa-eye-slash');
-});
+
 
 
 
