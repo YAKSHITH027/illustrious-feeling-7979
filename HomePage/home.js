@@ -1,11 +1,13 @@
-var fs = new Splide( '#first-slider', {
+new Splide( '#first-slider', {
     type : 'loop',
     arrows : true,
     autoplay : true,
+    speed ; 400,
 } ).mount();
 
-var ss = new Splide( '#second-slider', {
+new Splide( '#second-slider', {
     type : 'loop',
     arrows : true,
     autoplay : true,
+    speed : 300,
 }).mount();
