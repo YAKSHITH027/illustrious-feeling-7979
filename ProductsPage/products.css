@@ -16,6 +16,22 @@
     width: 20%;
     margin: 0.5rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    row-gap: 1rem;
+    text-transform: capitalize;
+}
+.filter>h3{
+    padding-top: 2rem;
+}
+.filter>button{
+    margin: 0 1rem;
+    border: 1px solid;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: black;
+    color: white;
 }
 .display-data{
     /* background-color: darkgoldenrod; */
