@@ -20,19 +20,21 @@ const handleRemove=(el)=>{
 
 const handlePriceCalculation =() => {
         const cartArr = JSON.parse(localStorage.getItem('cart'))
-
         let sum = 0;
 
         cartArr.map((el)=>{
             sum = sum + el.price * el.qty;
+           
         })
+     
 
         sum = Math.round(sum)
 
-        console.log(sum)
+     
 
         const span = document.querySelector("#totalPrice_span");
         span.innerText = sum;
+   
 
         localStorage.setItem('totalPrice',JSON.stringify(sum))
 }
@@ -42,10 +44,9 @@ handlePriceCalculation();
 const handleQuantity=(el, type)=> {
 
     let cartArr = JSON.parse(localStorage.getItem('cart'));
-
-    // first we have to check what is the type 
+ //increment
     if(type == "+"){
-        //increment
+        
       cartArr= cartArr.map((element)=>{
             if(element.id == el.id){
                 return {...element,qty:element.qty+1}
@@ -64,9 +65,15 @@ const handleQuantity=(el, type)=> {
     }else{
         //decrement
         cartArr= cartArr.map((element)=>{
-            if(element.id == el.id){
-                return {...element,qty:element.qty-1}
+            if(element.id === el.id ){
+            
+               console.log(element.qty)
 
+               if(element.qty <= 0){
+                return element
+               }
+          
+                return {...element,qty:element.qty-1}
             }else{
                 return element;
             }
@@ -112,14 +119,11 @@ const append = (data) => {
         qtyP.innerText = 'Quantity-' +`${el.qty}`
         qtyP.style.color = 'black'
 
-        removeButton.style.backgroundColor = 'red'
+        removeButton.style.backgroundColor = 'rgb(238, 83, 83)'
         removeButton.style.color = 'black'
-
-        increatmentButton.style.background = 'teal'
-        decrementButton.style.backgroundColor ='teal'
-
+        
         increatmentButton.style.color = 'white'
-        increatmentButton.style.color ='white';
+        
 
         increatmentButton.addEventListener('click',()=>{
             handleQuantity(el,'+')
@@ -158,10 +162,10 @@ const addressbutton = document.querySelector("#addressPage_button");
 addressbutton.addEventListener("click",()=>{
 
     const cartArr = JSON.parse(localStorage.getItem("cart"));
-    if(!cartArr || cartArr.length === 0) {
-        alert("Nothing in cart")
-        return;
-    }
+    // if(!cartArr || cartArr.length === 0) {
+    //     alert("Nothing in cart")
+    //     return;
+    // }
 
-    window.location.href="payment.html"
+    window.location.href="../PaymentPage/payment.html"
 });
