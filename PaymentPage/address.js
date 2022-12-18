@@ -52,11 +52,15 @@
    console.log(obj);
  }
 
-//  let cartarr=JSON.parse(localStorage.getItem('cart'))
+ let cartarr=JSON.parse(localStorage.getItem('cart'))
  
 //  let total=cartarr.reduce((prevalue,curvalue)=>{
 //   return prevalue+curvalue.price
 //  },0)
 //    console.log(total)
 
-    
+    let totalAmount_addres =JSON.parse(localStorage.getItem('totalPrice'))
+console.log(totalAmount_addres)
+
+const spantag = document.querySelector("#totalPrice_span");
+spantag.innerText = totalAmount_addres;

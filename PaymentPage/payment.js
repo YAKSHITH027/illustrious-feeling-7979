@@ -2,7 +2,7 @@
 
  document.querySelector("#buttonpaynow").addEventListener("click", payment);
 
- let total_amount=JSON.parse(localStorage.getItem('totalPrice'))
+ 
  let PayArr = [];
  function payment(event) {
    event.preventDefault();
@@ -58,3 +58,10 @@
 
 //  document.getElementsByClassName('balance').innerHtml=total
 //    console.log(total)
+
+
+let total_amount =JSON.parse(localStorage.getItem('totalPrice'))
+console.log(total_amount)
+
+const spantag = document.querySelector("#totalPrice_span");
+spantag.innerText = total_amount;
