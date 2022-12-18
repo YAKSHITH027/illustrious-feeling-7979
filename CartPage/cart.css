@@ -35,6 +35,9 @@ span{
     border-radius: .5rem;
     border: none;
 }
+#addressPage_button:hover{
+background-color: #5898f1;
+}
 
 /* append data div */
 
@@ -89,24 +92,44 @@ button{
     font-weight: 1000px;
     
 }
+#cartProducts_div>div>div>button:nth-child(1):hover{
+    background-color: #5898f1;
+ 
+}
+
+#cartProducts_div>div>div>button:nth-child(2):hover{
+    background-color: #5898f1;
+ 
+}
+#cartProducts_div>div>div>button:nth-child(3){
+    
+    padding: 10px 11px;
+ 
+}
 
 #cartProducts_div>div>div:nth-child(3) {
     display: flex;
     justify-content:space-between;
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-bottom: 1rem;
     width: 160px;
     margin: auto; 
-    text-align: center; 
+    text-align: center;
+     
 }
 
-#increatmentButton{
-    background-color: black;
+#cartProducts_div>div>div>button:nth-child(3):hover{
+    background-color: rgb(184, 5, 5);
+
+
+    
 }
 
 #totalTag{
 margin-left: -100px;
 }
+
+
 #logoImg{
     width: 150px;
     height: 50px;

@@ -123,6 +123,8 @@ const append = (data) => {
         removeButton.style.color = 'black'
         
         increatmentButton.style.color = 'white'
+
+        
         
 
         increatmentButton.addEventListener('click',()=>{
