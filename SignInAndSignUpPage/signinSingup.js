@@ -47,7 +47,7 @@ loginForm.addEventListener("submit",(e)=>{
 
 
 
-        // window.location.href = 
+        window.location.href = "../Homepage/home.html";
         lemail = "";
         lpassword ="";
     }else{
