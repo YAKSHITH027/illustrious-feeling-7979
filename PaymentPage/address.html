@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address</title>
+
+    <link rel="stylesheet" href="address.css" />
+</head>
+<body>
+
+    <div id="navebar">
+        <div><img width="180px" src="Shopify1.jpg" /></div>
+        <div id="middlenave">
+          <div>B A G</div>
+          <div>------- <u>A D D R E S S </u> ---------</div>
+
+          <div><a href="payment.html">P A Y M E N T</a></div>
+        </div>
+        <div>
+          <img
+            width="30px"
+            src="https://constant.myntassets.com/checkout/assets/img/sprite-secure.png"
+          />
+          1 0 0 % S E C U R E
+        </div>
+      </div>
+
+      <!-- ****************************************BODY****************************************** -->
+      
+
+      <div id ='container'>
+        
+          <div id="div1">
+             
+                <div class="shipping"> Shipping Address </div>
+        
+             <div id="div1address">
+                     <div>
+                        <h4>Home Delivery</h4>
+                        <p>(Get your producet delivery to your home)</p>
+                        <hr width="350px" color="orange">
+                        
+                     </div>
+                      
+                     
+
+                     <div>
+                        <h4>Pick From Nearby Store</h4>
+                        <p>(Collect your order from a strore of your choice)</p>
+                     </div>
+
+                         
+             </div>
+            
+            <form>
+               <div id="inputaddress">
+                  <div>
+                    <h4>Add Address</h4>
+
+                    <label class="inputspace" for="fullname"> Full Name <span class="star">*</span></label>
+                    <input type="text" id="fullname" placeholder ="Enter fullname"> 
+                       
+                    <label class="inputspace"for=""> Pincode <span class="star">*</span></label>
+                    <input type="number" placeholder="Enter your pincode">
+
+                    <label class="inputspace"for="">State <span class="star">*</span></label>
+                    <input type="text" placeholder="Enter your state">
+
+                    <label class="inputspace"for=""> Street Name Or Number <span class="star">*</span></label>
+                    <input type="text" placeholder="Enter your street details">
+                  </div>
+
+
+                  <div  id="address2">
+
+                    
+                    <label class="inputspace" for="fullname">Mobile Number <span class="star">*</span></label>
+                    <input type="number" id="fullname" placeholder="+91 Enter Mobile number"> 
+                       
+                    <label class="inputspace" for="">City <span class="star">*</span></label>
+                    <input type="text" placeholder="Enter your city or town">
+
+                    <label class="inputspace" for="">Building your name or number <span class="star">*</span></label>
+                    <input type="text" placeholder="Enter building details">
+
+                    <label class="inputspace" for="">Landmark(optional)</label>
+                    <input type="text" placeholder="Enter landmark details">
+                  </div>
+              </form> 
+              
+              
+            </div>
+            
+
+            <!-- ******************************************************************* -->
+              <div id="addressoptional">
+                   <p>Address Type (Optional)</p>  
+
+                   <div>
+                    <input type="radio" name="fav_language" value="0">
+                    <label for="html">Home</label>
+                    <!-- <br> -->
+
+                    <input type="radio" name="fav_language" value="0">
+                    <label for="css">Office</label>
+                    <br>
+                   </div> 
+                    
+              </div>
+
+
+              <button id="button">ADD ADDRESS AND CONTINUE</button>
+
+          </div>
+             
+          <div id="div2">
+            <div>Price Details</div>
+              <div id="totalpayment">
+                <div>Discount</div>
+                <div> &#8377 0</div>
+                <div>Coupon Discount</div>
+                <div class="coupon">Apply Coupon</div>
+                <div>Convenience Fee</div>
+                <div class="free">FREE</div>
+              
+              </div>
+          <div id="totalprice">
+            <div>Total Amount</div>
+            <div  class='balance' id="t_amount"></div>
+          </div>
+          </div>
+
+      </div>
+
+                <!-- *******Fotter********** -->
+                <div id="fotter">
+                    <div class="cardimg">
+                      <img
+                        width="95px"
+                        height="50"
+                        src="https://constant.myntassets.com/checkout/assets/img/footer-bank-ssl.png"
+                      />
+                      <img
+                        width="95px"
+                        height="50"
+                        src="https://constant.myntassets.com/checkout/assets/img/footer-bank-mc.png"
+                      />
+                      <img
+                        width="95px"
+                        height="50"
+                        src="https://constant.myntassets.com/checkout/assets/img/footer-bank-nb.png"
+                      />
+                      <img
+                        width="95px"
+                        height="50"
+                        src="https://constant.myntassets.com/checkout/assets/img/footer-bank-bhim.png"
+                      />
+                      <img
+                        width="95px"
+                        height="50"
+                        src="https://constant.myntassets.com/checkout/assets/img/footer-bank-cod.png"
+                      />
+                      <img
+                        width="95px"
+                        height="50"
+                        src="https://constant.myntassets.com/checkout/assets/img/footer-bank-visa.png"
+                      />
+                      <img
+                        width="95px"
+                        height="50"
+                        src="https://constant.myntassets.com/checkout/assets/img/footer-bank-paypal.png"
+                      />
+                    </div>
+          
+                    <div id="contacthelp">
+                      <h4>Need Help ? Contact Us</h4>
+                    </div>
+                  </div>
+                </div>
+        
+</body>
+</html>
+
+<script src="address.js"></script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

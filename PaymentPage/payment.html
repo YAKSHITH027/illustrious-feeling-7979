@@ -1,12 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopify</title>
+    <link rel="stylesheet" href="payment.css" />
+  </head>
+
+  <body>
+    <!-- ******************NaveBar*************** -->
+    <div id="navebar">
+      <div><img width="180px" src="Shopify1.jpg" /></div>
+      <div id="middlenave">
+        <div>B A G</div>
+        <div>------- <a href="address.html">A D D R E S S</a>  ---------</div>
+        <div><u>P A Y M E N T</u></div>
+      </div>
+      <div>
+        <img
+          width="30px"
+          src="https://constant.myntassets.com/checkout/assets/img/sprite-secure.png"
+        />
+        1 0 0 % S E C U R E
+      </div>
+    </div>
+
+    <div id="container">
+      <div class="div1">
+        <div class="bankoffer">
+          <h3>
+            <img
+              width="20px"
+              src="https://cdn-icons-png.flaticon.com/512/372/372754.png"
+            />
+            Bank Offer
+          </h3>
+
+          <li>
+            <span
+              >10% Instant Discount on ICICI Bank Credit and Debit Cards on a
+              min spend of Rs 3,500.TCA</span
+            >
+          </li>
+
+          <h4 class="showmore">
+            <a href="#"></a>Show More <i class="arrow down"></i>
+          </h4>
+          <!-- <a href="#">Show More <i class="arrow down"></i></a> -->
+          <!--                 
+                    <li><span>10% Instant Discount on ICICI Bank Credit and Debit Cards on a min spend of Rs 3,500.TCA</span></li>
+                    <li><span>10% Instant Discount on ICICI Bank Credit and Debit Cards on a min spend of Rs 3,500.TCA</span></li>
+                    <li><span>10% Instant Discount on ICICI Bank Credit and Debit Cards on a min spend of Rs 3,500.TCA</span></li>
+                    <li><span>10% Instant Discount on ICICI Bank Credit and Debit Cards on a min spend of Rs 3,500.TCA</span></li> -->
+        </div>
+        <!-- *****************Body************ -->
+
+        <div class="pay-method-main">
+          <h3>Choose Payment Mode</h3>
+
+          <div class="pay-option-submain">
+            <div class="body">
+              <div class="pay-start">
+                <button>
+                  <img
+                    width="20px"
+                    height="15px"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLyt4D_E4Qbvvw8tA6oFy-LOPeWxtAuEV-YQ&usqp=CAU"
+                  />
+                  Cash On Delivery
+                </button>
+              </div>
+
+              <div class="pay-start" id="Debitcard">
+                <button id="creditcard" onclick="Renderdata(event)">
+                  <img
+                    width="30px"
+                    height="20px"
+                    src="https://static.thenounproject.com/png/1598609-200.png"
+                  />
+                  Credit/Debit Card
+                </button>
+              </div>
+
+              <div class="pay-start">
+                <button id="button-upi">
+                  <img
+                    width="25px"
+                    height="20px"
+                    src="data:image/jpeg;base64,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"
+                  />
+                  PhonePay/Google Pay/BHIMUPI
+                </button>
+              </div>
+
+              <div class="pay-start">
+                <button>
+                  <img
+                    width="20px"
+                    height="20px"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuZhYxUcuVKS_dM5XjEQAiZ_INrOQcQkgN9g&usqp=CAU"
+                  />
+                  Payment/Wallets
+                </button>
+              </div>
+
+              <div class="pay-start">
+                <button>
+                  <img
+                    width="20px"
+                    height="20px"
+                    src="https://thumbs.dreamstime.com/b/bank-building-icon-bank-building-logo-bank-building-icon-bank-building-logo-white-background-simple-vector-illustration-125931658.jpg"
+                  />
+                  Net Banking
+                </button>
+              </div>
+
+              <div class="pay-start">
+                <button>
+                  <img
+                    width="20px"
+                    height="20px"
+                    src="https://img.etimg.com/thumb/msid-61543308,width-300,imgsize-12710,,resizemode-4,quality-100/do-you-know-the-real-cost-of-digital-transactions.jpg"
+                  />
+                  EMI/Pay Later
+                </button>
+              </div>
+
+              <!-- <div class="pay-start"><h4><img width="20px" height="15px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLyt4D_E4Qbvvw8tA6oFy-LOPeWxtAuEV-YQ&usqp=CAU" >    Cash On Delivery</h4></div> -->
+              <!-- <div class="pay-start"><h4><img width="25px" src="https://static.thenounproject.com/png/1598609-200.png" >    Credit/Debit Card</h4></div> -->
+              <!-- <div class="pay-start"><h4><img width="25px" src="data:image/jpeg;base64,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" >  PhonePay/Google Pay/BHIMUPI</h4></div>
+                       <div class="pay-start"><h4><img width="20px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuZhYxUcuVKS_dM5XjEQAiZ_INrOQcQkgN9g&usqp=CAU" >    Payment/Wallets</h4></div>
+                        <div class="pay-start"><h4><img width="20px" src="https://thumbs.dreamstime.com/b/bank-building-icon-bank-building-logo-bank-building-icon-bank-building-logo-white-background-simple-vector-illustration-125931658.jpg" >   Net Banking</h4></div>
+                       <div class="pay-start"><h4><img width="20px" src="https://img.etimg.com/thumb/msid-61543308,width-300,imgsize-12710,,resizemode-4,quality-100/do-you-know-the-real-cost-of-digital-transactions.jpg" >    EMI/Pay Later</h4></div> -->
+            </div>
+
+            <div class="render">
+              <h3>Credit/Debit Card</h3>
+              <p>
+                Please ensure your card can be used for online transactions.
+              </p>
+              <p id="knowmore">Know More</p>
+
+              <input
+                id="cardnumber"
+                type="tel"
+                maxlength="19"
+                placeholder="Card Number"
+                
+              />
+              <img
+                id="cdimage"
+                width="25px"
+                src="https://www.sos.alabama.gov/sites/default/files/online-form.png"
+              />
+
+              <input
+                id="nameofcard"
+                type="text"
+                maxlength="50"
+                placeholder="Name on card"
+              />
+
+              <input
+                id="dateofbirth"
+                type="tel"
+                pattern="\d*"
+                maxlength="5"
+                placeholder="Valid Thru (MM/YY)"
+              />
+
+              <input
+                id="cvv"
+                type="Password"
+                autocomplete="off"
+                pattern="\d*"
+                maxlength="3"
+                placeholder="CVV"
+              />
+
+              <button id="buttonpaynow">PAY NOW</button>
+            </div>
+          </div>
+
+          <div id="gift">
+            <div>
+              <h3>
+                <img
+                  width="20px"
+                  src="https://cdn-icons-png.flaticon.com/512/372/372754.png"
+                />
+                Have a Gift Card?
+              </h3>
+            </div>
+            <div class="applygiftcard">APPLY GIFT CARD</div>
+          </div>
+        </div>
+
+        <!-- *******Fotter********** -->
+        <div id="fotter">
+          <div class="cardimg">
+            <img
+              width="95px"
+              height="50"
+              src="https://constant.myntassets.com/checkout/assets/img/footer-bank-ssl.png"
+            />
+            <img
+              width="95px"
+              height="50"
+              src="https://constant.myntassets.com/checkout/assets/img/footer-bank-mc.png"
+            />
+            <img
+              width="95px"
+              height="50"
+              src="https://constant.myntassets.com/checkout/assets/img/footer-bank-nb.png"
+            />
+            <img
+              width="95px"
+              height="50"
+              src="https://constant.myntassets.com/checkout/assets/img/footer-bank-bhim.png"
+            />
+            <img
+              width="95px"
+              height="50"
+              src="https://constant.myntassets.com/checkout/assets/img/footer-bank-cod.png"
+            />
+            <img
+              width="95px"
+              height="50"
+              src="https://constant.myntassets.com/checkout/assets/img/footer-bank-visa.png"
+            />
+            <img
+              width="95px"
+              height="50"
+              src="https://constant.myntassets.com/checkout/assets/img/footer-bank-paypal.png"
+            />
+          </div>
+
+          <div id="contacthelp">
+            <h4>Need Help ? Contact Us</h4>
+          </div>
+        </div>
+      </div>
+
+      <div id="div2">
+              <div>Price Details</div>
+              <div id="totalpayment">
+                  <div>Discount</div>
+                  <div> &#8377 0</div>
+                  <div>Coupon Discount</div>
+                  <div class="coupon">Apply Coupon</div>
+                  <div>Convenience Fee</div>
+                  <div class="free">FREE</div>
+              
+              </div>
+          <div id="totalprice">
+            <div class="cartamount">Total Amount</div>
+            <div class='balance' id="t_amount"></div>
+          </div>
+      </div>
+
+    </div>
+  </body>
 </html>
+
+
+
+
+<script src="payment.js"></script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
