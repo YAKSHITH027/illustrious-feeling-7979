@@ -106,4 +106,4 @@ document.querySelector("#search2").addEventListener("input", (e) => {
 });
 
 document.querySelector(".userName").innerText =
-  JSON.parse(localStorage.getItem("userName")) || "yakshithh";
+  localStorage.getItem("userName") || "yakshithh";
