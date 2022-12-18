@@ -1,6 +1,26 @@
 const baseURL = "https://relince-data-sever-fp05-318.onrender.com/products";
 const productsDataContainer = document.querySelector(".products-data");
 
+// toast notification
+toastr.options = {
+  closeButton: true,
+  debug: false,
+  newestOnTop: false,
+  progressBar: true,
+  positionClass: "toast-top-center",
+  preventDuplicates: false,
+  onclick: null,
+  showDuration: "300",
+  hideDuration: "1000",
+  timeOut: "2000",
+  extendedTimeOut: "1000",
+  showEasing: "swing",
+  hideEasing: "linear",
+  showMethod: "fadeIn",
+  hideMethod: "fadeOut",
+};
+// toastr.options.toastClass = "toast-style";
+
 // main GET
 
 const mainGET = async (URL) => {
@@ -47,6 +67,7 @@ const postRequest = async (data) => {
       body: JSON.stringify(data),
     });
     console.log(res);
+    toastr.success("product is added");
     mainGET(baseURL);
     getRequest(baseURL);
   } catch (error) {
@@ -64,7 +85,9 @@ const patchRequest = async (id, data) => {
       body: JSON.stringify(data),
     });
     // console.log(res);
-    getRequest(baseURL);
+    toastr.success("product is edited");
+    mainGET(baseURL);
+    // getRequest(baseURL);
   } catch (error) {
     console.log(error);
   }
@@ -78,6 +101,8 @@ const deleteRequest = async (id) => {
       method: "DELETE",
     });
     // console.log(res);
+    mainGET(baseURL);
+    toastr.error("product is deleted");
     getRequest(baseURL);
   } catch (error) {
     console.log(error);

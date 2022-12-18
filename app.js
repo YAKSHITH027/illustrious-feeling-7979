@@ -26,7 +26,7 @@ const mainGET = async (URL) => {
     return acc;
   }, []);
   // console.log("in");
-  console.log(unique);
+  console.log("index", unique);
   allData = unique;
 };
 mainGET(baseURL);
@@ -43,10 +43,12 @@ document.querySelector("#search").addEventListener("input", (e) => {
           `;
     }
   });
-  // console.log(finalData);
-  if (finalData.length > 5) {
-    finalData.length = 5;
-  }
+  finalData = finalData.filter((item) => {
+    if (item) {
+      return item;
+    }
+  });
+  console.log("finaldata", finalData);
   if (finalData.length != 0) {
     document.querySelector(".suggestion").innerHTML = finalData.join("");
     let ab = document.querySelector(".sugg");
@@ -79,9 +81,11 @@ document.querySelector("#search2").addEventListener("input", (e) => {
     }
   });
   // console.log(finalData);
-  if (finalData.length > 5) {
-    finalData.length = 5;
-  }
+  finalData = finalData.filter((item) => {
+    if (item) {
+      return item;
+    }
+  });
   if (finalData.length != 0) {
     // document.querySelector(".suggestion").innerHTML = finalData.join("");
     let ab = (document.querySelector(".sugg").innerHTML = finalData.join(""));
