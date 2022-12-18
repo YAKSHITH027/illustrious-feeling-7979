@@ -1,4 +1,4 @@
-const baseURL = "https://relince-data-sever-fp05-318.onrender.com/products";
+const baseURL2 = "https://relince-data-sever-fp05-318.onrender.com/products";
 let cat = localStorage.getItem("category").toLowerCase() || "mobile";
 const getRequest = async (URL, page_num = 1, cat = "") => {
   try {
@@ -20,7 +20,7 @@ for (i = 1; i < cat.length - 1; i++) {
 // console.log(cat.length);
 // console.log(newCat == "mobile");
 // console.log(cat, "camera");
-getRequest(baseURL, 1, `category=${newCat}&`);
+getRequest(baseURL2, 1, `category=${newCat}&`);
 
 const renderData = (data) => {
   let newData = data.map((item) => {
@@ -49,4 +49,13 @@ const renderData = (data) => {
            `;
   });
   document.querySelector(".display-data").innerHTML = newData.join("");
+  let allSingleProduct = document.querySelectorAll(".single-product");
+  allSingleProduct.forEach((single) => {
+    single.addEventListener("click", (e) => {
+      // console.log(e.currentTarget.id);
+      let id = e.currentTarget.id;
+      localStorage.setItem("productId", id);
+      window.location.href = "../singleProductPage/singleProduct.html";
+    });
+  });
 };
