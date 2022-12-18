@@ -53,11 +53,15 @@ document.querySelector("#search").addEventListener("input", (e) => {
     document.querySelector(".suggestion").innerHTML = finalData.join("");
     let ab = document.querySelector(".sugg");
     console.log(ab);
+  } else {
+    document.querySelector(".suggestion").innerHTML = "";
   }
   if (finalData.length > 0) {
     let alltar = document.querySelectorAll(".suggestio");
     alltar.forEach((single) => {
       single.addEventListener("click", (e) => {
+        document.querySelector(".suggestion").innerHTML = "";
+        document.querySelector("#search").value = "";
         localStorage.setItem(
           "category",
           JSON.stringify(e.target.innerText.toLowerCase())
