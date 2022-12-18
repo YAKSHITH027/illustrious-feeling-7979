@@ -1,6 +1,25 @@
 let val = JSON.parse(localStorage.getItem("productId"));
 const baseURL2 = "https://relince-data-sever-fp05-318.onrender.com/products";
 
+// toast notification
+toastr.options = {
+  closeButton: true,
+  debug: false,
+  newestOnTop: false,
+  progressBar: true,
+  positionClass: "toast-top-center",
+  preventDuplicates: false,
+  onclick: null,
+  showDuration: "300",
+  hideDuration: "1000",
+  timeOut: "2000",
+  extendedTimeOut: "1000",
+  showEasing: "swing",
+  hideEasing: "linear",
+  showMethod: "fadeIn",
+  hideMethod: "fadeOut",
+};
+
 console.log(val);
 const getRequest = async (URL) => {
   try {
@@ -65,6 +84,7 @@ let renderData = (data) => {
   let storageData = JSON.parse(localStorage.getItem("cart")) || [];
   document.querySelector(".add-cart").addEventListener("click", (e) => {
     storageData.push(...data);
+    toastr.success("product is added to the cart");
     localStorage.setItem("cart", JSON.stringify(storageData));
   });
 };

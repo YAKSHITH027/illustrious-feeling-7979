@@ -1,5 +1,7 @@
 const baseURL2 = "https://relince-data-sever-fp05-318.onrender.com/products";
 let cat = localStorage.getItem("category").toLowerCase() || "mobile";
+
+let filterData = [];
 const getRequest = async (URL, page_num = 1, cat = "") => {
   try {
     let res = await fetch(`${URL}?${cat}_limit=10&_page=${page_num}`);
@@ -8,6 +10,7 @@ const getRequest = async (URL, page_num = 1, cat = "") => {
     let total = res.headers.get("x-total-count");
     let totalPage = Math.ceil(total / 6);
     renderData(data);
+    filterData = data;
     console.log(data);
   } catch (error) {
     console.log(error);
@@ -170,4 +173,23 @@ document.querySelector("#search2").addEventListener("input", (e) => {
       });
     });
   }
+});
+
+// filter code
+
+document.querySelector(".sort-price-asce").addEventListener("click", () => {
+  let newData = filterData.sort((a, b) => {
+    return a.price - b.price;
+  });
+
+  console.log("clickhello", newData);
+  renderData(newData);
+});
+document.querySelector(".sort-price-desc").addEventListener("click", () => {
+  let newData = filterData.sort((a, b) => {
+    return b.price - a.price;
+  });
+
+  console.log("clickhello", newData);
+  renderData(newData);
 });
