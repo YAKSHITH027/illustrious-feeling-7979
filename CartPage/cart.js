@@ -72,7 +72,7 @@ const handleQuantity=(el, type)=> {
                if(element.qty <= 0){
                 return element
                }
-          
+
                 return {...element,qty:element.qty-1}
             }else{
                 return element;

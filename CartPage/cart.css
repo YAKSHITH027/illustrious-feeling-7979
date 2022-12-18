@@ -103,3 +103,14 @@ button{
 #increatmentButton{
     background-color: black;
 }
+
+#totalTag{
+margin-left: -100px;
+}
+#logoImg{
+    width: 150px;
+    height: 50px;
+    margin-left: -100px;
+    margin-right: 100px;
+    margin-top: 10px;
+}
