@@ -2,6 +2,7 @@
 
  document.querySelector("#buttonpaynow").addEventListener("click", payment);
 
+ let total_amount=JSON.parse(localStorage.getItem('totalPrice'))
  let PayArr = [];
  function payment(event) {
    event.preventDefault();
@@ -42,5 +43,18 @@
     swal("THANK YOU", "Your Order Is Successful!" , "success");
    }
 
+   document.querySelector('#t_amount').innerHtml= `₹`+ total_amount
    console.log(obj);
  }
+
+
+ 
+
+//  JSON.parse(localStorage.getItem('cart'))
+ 
+//  let total=cart.reduce((prevalue,curvalue)=>{
+//   return prevalue+curvalue.price
+//  },0)
+
+//  document.getElementsByClassName('balance').innerHtml=total
+//    console.log(total)

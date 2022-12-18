@@ -3,6 +3,9 @@
 
 
  document.querySelector("#button").addEventListener("click", payment);
+
+ let total_amount=JSON.parse(localStorage.getItem('totalPrice'))
+
   let Payarr=[]
  function payment(event) {
    event.preventDefault();
@@ -33,15 +36,27 @@
     
      swal("Opps!", "Please fill all required details");
    } else {
-     Payarr.push(obj);
-     localStorage.setItem("credit", JSON.stringify(obj));
 
-     swal("THANK YOU", "Address saved", "success");
+    Payarr.push(obj);
+    localStorage.setItem("credit", JSON.stringify(obj));
+    swal("THANK YOU", "Address saved", "success");
+    // swal( 'fill correct name')
+    
 
      setTimeout(() => {
        window.location.href = "payment.html";
      }, 3000);
    }
+
+   document.querySelector('#t_amount').innerHtml = total_amount
    console.log(obj);
  }
 
+//  let cartarr=JSON.parse(localStorage.getItem('cart'))
+ 
+//  let total=cartarr.reduce((prevalue,curvalue)=>{
+//   return prevalue+curvalue.price
+//  },0)
+//    console.log(total)
+
+    

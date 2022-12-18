@@ -289,7 +289,7 @@ button:hover {
     display:grid;
     grid-template-columns: repeat(2,1fr);
     margin: 25px;
-    gap:30px;
+    gap:15px;
     border: 1px solid purple;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: small;
@@ -312,6 +312,19 @@ button:hover {
     padding: 10px;
     font-weight: bold;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#amount{
+    width:100px;
+}
+
+.coupon{
+    /* color: rgb(174, 50, 50); */
+    color: rgb(239, 24, 24);
+}
+
+.free{
+    color: rgb(88, 173, 173);
 }
 
 /* ************************fotter************************ */
@@ -342,3 +355,19 @@ button:hover {
      
     
 }
+
+a{
+    text-decoration: none;
+    color: gray;
+  
+}
+
+@media screen and(min-width:450px) and (max-width: 1000px) {
+      
+    #container{
+        flex-direction: column;
+    }
+   
+   
+}
+    
