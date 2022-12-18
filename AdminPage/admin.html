@@ -35,7 +35,7 @@
       <div class="top-category">
         <p>top 4 category</p>
         <hr />
-        <div class="top">></div>
+        <div class="top"></div>
       </div>
     </div>
     <div class="container">
@@ -63,9 +63,10 @@
           <div class="form-img">
             <label for="img">image url</label>
             <input
-              type="text"
+              type="url"
               class="form-input form-img-in"
               placeholder="Enter Img URL"
+              required
             />
           </div>
           <div class="form-title">
@@ -74,6 +75,7 @@
               type="text"
               class="form-input form-title-in"
               placeholder="Enter Product Title"
+              required
             />
           </div>
           <div class="form-price-cat">
@@ -83,23 +85,26 @@
                 type="text"
                 class="form-input form-category-in"
                 placeholder="Category"
+                required
               />
             </div>
             <div class="form-price">
               <label for="price">price</label>
               <input
-                type="text"
+                type="number"
                 class="form-input form-price-in"
                 placeholder="Price"
+                required
               />
             </div>
           </div>
           <div class="form-quntity">
             <label for="quntity">quntity</label>
             <input
-              type="text"
+              type="number"
               class="form-input form-qun-in"
               placeholder="Enter Product quntity"
+              required
             />
           </div>
           <div class="form-desc">
@@ -108,6 +113,7 @@
               type="text"
               class="form-input form-desc-in"
               placeholder="Enter Product description"
+              required
             />
           </div>
           <input type="submit" class="form-add" value="Add Product" />
