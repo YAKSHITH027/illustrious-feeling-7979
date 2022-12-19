@@ -96,13 +96,12 @@ const append = (data) => {
     qtyP.innerText = "Quantity-" + `${el.qty}`;
     qtyP.style.color = "black";
 
-    removeButton.style.backgroundColor = "red";
+    removeButton.style.backgroundColor = "rgb(238, 83, 83)";
     removeButton.style.color = "black";
 
-    increatmentButton.style.background = "teal";
-    decrementButton.style.backgroundColor = "teal";
+    // increatmentButton.style.background = "teal";
+    // decrementButton.style.backgroundColor = "teal";
 
-    increatmentButton.style.color = "white";
     increatmentButton.style.color = "white";
 
     increatmentButton.addEventListener("click", () => {
@@ -140,5 +139,5 @@ addressbutton.addEventListener("click", () => {
     return;
   }
 
-  window.location.href = "../CartPage/cart.js";
+  window.location.href = "../PaymentPage/address.html";
 });

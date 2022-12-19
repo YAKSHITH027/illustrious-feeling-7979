@@ -1,3 +1,146 @@
+/* 
+
+#cartDetails_div{
+    display: flex;
+    justify-content: space-around;
+    background-color: #2874f0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
+h3{
+    background-color:#2874f0;
+    color: black;
+}
+
+span{
+    background-color: #2874f0;
+    color: black;
+}
+
+#addressPage_button{
+    background-color:  #ced8e7; 
+    padding: 0.5rem;
+    color: black;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 5px;
+    border-radius: .5rem;
+    border: none;
+}
+#addressPage_button:hover{
+background-color: #5898f1;
+}
+
+/* append data div */
+
+/* 
+#cartProducts_div {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    margin: auto;
+    margin-top: 30px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#cartProducts_div>div{
+    width: 300px;
+    margin: auto;
+    border: 1px solid white;
+      color: black;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      border-radius: 10px;
+      padding-top: 20px;
+      padding-bottom: 30px;  
+}
+
+img{
+    width: 250px;
+    height:300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+p{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button{
+    background-color: #6a85ad;
+    color: black;
+    padding: .7rem;
+    margin-left: 1rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    font-weight: 1000px;
+    
+}
+#cartProducts_div>div>div>button:nth-child(1):hover{
+    background-color: #5898f1;
+ 
+}
+
+#cartProducts_div>div>div>button:nth-child(2):hover{
+    background-color: #5898f1;
+ 
+}
+#cartProducts_div>div>div>button:nth-child(3){
+    
+    padding: 10px 11px;
+ 
+}
+
+#cartProducts_div>div>div:nth-child(3) {
+    display: flex;
+    justify-content:space-between;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 160px;
+    margin: auto; 
+    text-align: center;
+     
+}
+
+#cartProducts_div>div>div>button:nth-child(3):hover{
+    background-color: rgb(184, 5, 5);
+
+
+    
+}
+
+#totalTag{
+margin-left: -100px;
+}
+
+
+#logoImg{
+    width: 150px;
+    height: 50px;
+    margin-left: -100px;
+    margin-right: 100px;
+    margin-top: 10px;
+} */ 
+
+
+
+
 
 
 #cartDetails_div{
