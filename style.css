@@ -113,8 +113,14 @@ li{
     list-style: none;
     
 }
-.info-login{
+/* .info-login{
     display: none;
+} */
+.cart-hide{
+    display: none;
+}
+.info-login>a{
+    color: white;
 }
 a{
     text-decoration: none;
